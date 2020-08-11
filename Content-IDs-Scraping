@@ -1,0 +1,23 @@
+//Written by Prashanth Reniguntala, CEO - Measure Marketer
+
+// Retrive the content IDs from the website using DOM scraping method for Facebook Dynamic Ads
+
+(function addtoCartIds() {
+var item = document.querySelectorAll(".products-list.cart-list li[class^='item'] > div > div > div.col-description > h2 > a");
+var contentIds = [];
+var retrieveIds;
+for(i=0; i<item.length; i++) {
+ retrieveIds = item[i].href.slice(-10, -5);
+contentIds.push(retrieveIds);
+}
+return contentIds;
+})();
+
+
+//Retrive the Product Prices from the website using DOM scraping method for Facebook Dynamic Ads
+
+(function() {
+ var a = document.querySelectorAll("span.price")[3].innerHTML;
+ var b = a.slice(4);
+  return b;
+})();

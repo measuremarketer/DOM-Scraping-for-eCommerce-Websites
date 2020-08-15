@@ -1,0 +1,12 @@
+// Written by Prashanth Reniguntala, Founder, CEO - Measure Marketer
+
+// get the price of all the products from a cateogry page
+
+document.querySelectorAll(".ast-woocommerce-container > ul.products.columns-4 > 
+li[class] > div.astra-shop-summary-wrap > span.price > ins > span.woocommerce-Price-amount.amount")[0].innerText
+
+// get the product IDs of the product from the categpry page using the classList, since the product ID is given in the class
+
+document.querySelectorAll(".ast-woocommerce-container > ul.products.columns-4 > li[class]")[0].classList;
+
+// use the array index and then slice the value to retrive the product ID
